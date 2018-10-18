@@ -4,8 +4,9 @@ var io = require('socket.io')(server)
 // require('events').EventEmitter.defaultMaxListeners = 0;
 
 const robotjs = require('robotjs')
+const port = 8080
 
-server.listen(8080, (err) => {
+server.listen(port, (err) => {
   if (err) throw err
   console.log('listening on', server.address())
 })
@@ -16,16 +17,6 @@ const degreeToRadian = (degree) => degree / 180 * Math.PI
 const toScreen = (v, screenSize) => Math.round(Math.min(1, Math.max(0, v * 0.5 + 0.5)) * screenSize)
 
 io.on('connection', function (socket) {
-  // socket.emit('news', { hello: 'world' })
-  // socket.on('sensor', function (data) {
-  //   // console.log(data)
-  //   const { alpha, beta, gamma } = data
-  //   const xAxis = toScreen(Math.sin(degreeToRadian(gamma)) * 1.5, robotjs.getScreenSize().width)
-  //   const yAxis = toScreen(Math.sin(degreeToRadian(beta)) * 2.5, robotjs.getScreenSize().height)
-  //   // console.log(xAxis, yAxis)
-  //   // robotjs.moveMouse(xAxis, yAxis)
-  // })
-
   socket.on('move', function (data) {
     const { clientX, clientY, innerWidth, innerHeight } = data
     // console.log(data)
