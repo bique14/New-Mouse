@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>my new mouse</title>
+  </head>
+  <body ontouchmove="getTouchPositions(event)">
+    <p id="screen-width"></p>
+    <p id="screen-height"></p>
+    <p id="mouseX"></p>
+    <p id="mouseY"></p>
+    <!-- <button id="click" style="width: 100px; height: 200px;">CLICK</button> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
