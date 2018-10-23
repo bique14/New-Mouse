@@ -14,6 +14,3 @@ with [Robot.js](http://robotjs.io/) and socket.io
 1. open your mobilephone and go to (your_IP_address):(port) 
 > eg. 192.168.1.10:8080
 2. touch in the webpage on the phone and see it!
-
-
-### __Recommend you to add this website to homescreen !__
